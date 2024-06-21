@@ -135,20 +135,20 @@ body {
   animation: fade-in 240ms var(--sw-ease-entrance) forwards;
 }
 
-.brand img {
+.brand-logo {
   display: block;
   height: auto;
 }
 
-.brand-logo--dark {
+.brand .brand-logo--dark {
   display: none;
 }
 
-[data-theme="dark"] .brand-logo--light {
+[data-theme="dark"] .brand .brand-logo--light {
   display: none;
 }
 
-[data-theme="dark"] .brand-logo--dark {
+[data-theme="dark"] .brand .brand-logo--dark {
   display: block;
 }
 
