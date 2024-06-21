@@ -2,6 +2,8 @@
 
 Under-construction landing page for [fudive.com](https://fudive.com), the FuDive unified wealth platform.
 
+FuDive Engineering combines software engineering and quantitative financial engineering to unify fragmented investment platforms, model portfolio risk, and develop data-driven strategies for asset allocation, diversification, and reinvestment.
+
 ## Brand
 
 - Slogan: **Your Wealth. Your Command.**
