@@ -24,4 +24,32 @@
       setTimeout(() => setProgress(PROGRESS_TARGET), 600);
     });
   }
+
+  const root = document.documentElement;
+  const themeToggle = document.querySelector("[data-theme-toggle]");
+
+  if (themeToggle) {
+    const applyTheme = (theme) => {
+      root.setAttribute("data-theme", theme);
+      try {
+        localStorage.setItem("fudive-theme", theme);
+      } catch (e) {
+        /* storage unavailable */
+      }
+      const meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) {
+        meta.content = theme === "dark" ? "#0d0d0d" : "#ffffff";
+      }
+      themeToggle.setAttribute(
+        "aria-label",
+        theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+      );
+    };
+
+    themeToggle.addEventListener("click", () => {
+      applyTheme(root.getAttribute("data-theme") === "dark" ? "light" : "dark");
+    });
+
+    applyTheme(root.getAttribute("data-theme") === "dark" ? "dark" : "light");
+  }
 })();

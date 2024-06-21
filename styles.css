@@ -47,6 +47,26 @@
   --sw-duration-slow: 240ms;
   --sw-ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
   --sw-ease-entrance: cubic-bezier(0, 0, 0.2, 1);
+
+  color-scheme: light;
+}
+
+/* dark palette — theme/sharp/02-swiss-grid.yaml (brand-adapted accent) */
+[data-theme="dark"] {
+  --sw-bg: #0d0d0d;
+  --sw-surface: #161616;
+  --sw-surface-alt: #1f1f1f;
+  --sw-text-primary: #f4f4f4;
+  --sw-text-secondary: #bbbbbb;
+  --sw-text-muted: #888888;
+  --sw-text-inverse: #0d0d0d;
+  --sw-border: #f4f4f4;
+  --sw-border-soft: #2a2a2a;
+  --sw-accent: #ffd700;
+  --sw-accent-hover: #e6c200;
+  --sw-accent-ink: #ffd700;
+
+  color-scheme: dark;
 }
 
 /* ── Reset / base ───────────────────────────────────── */
@@ -72,11 +92,13 @@ body {
   font-size: 16px;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
+  transition: background-color var(--sw-duration-base) var(--sw-ease-standard),
+              color var(--sw-duration-base) var(--sw-ease-standard);
 }
 
 ::selection {
   background: var(--sw-accent);
-  color: var(--sw-text-primary);
+  color: #111111;
 }
 
 :focus-visible {
@@ -94,6 +116,7 @@ body {
 /* ── Header — hairline bottom rule only ─────────────── */
 .site-header {
   border-bottom: 1px solid var(--sw-border);
+  transition: border-color var(--sw-duration-base) var(--sw-ease-standard);
 }
 
 .site-header__inner {
@@ -101,7 +124,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: var(--sw-space-2);
-  height: 64px;
+  flex-wrap: wrap;
+  min-height: 64px;
+  padding-block: var(--sw-space-1);
 }
 
 .brand {
@@ -113,6 +138,24 @@ body {
 .brand img {
   display: block;
   height: auto;
+}
+
+.brand-logo--dark {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo--light {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo--dark {
+  display: block;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--sw-space-2);
 }
 
 .badge {
@@ -127,6 +170,8 @@ body {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--sw-text-primary);
+  transition: border-color var(--sw-duration-base) var(--sw-ease-standard),
+              color var(--sw-duration-base) var(--sw-ease-standard);
   opacity: 0;
   animation: fade-in 240ms var(--sw-ease-entrance) 60ms forwards;
 }
@@ -136,6 +181,62 @@ body {
   height: 8px;
   background: var(--sw-accent);
   border: 1px solid var(--sw-border);
+}
+
+/* theme toggle — pure rectangle, uppercase label */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--sw-border);
+  border-radius: var(--sw-radius);
+  background: transparent;
+  color: var(--sw-text-primary);
+  font-family: inherit;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--sw-duration-base) var(--sw-ease-standard),
+              color var(--sw-duration-base) var(--sw-ease-standard);
+  opacity: 0;
+  animation: fade-in 240ms var(--sw-ease-entrance) 60ms forwards;
+}
+
+.theme-toggle:hover {
+  color: var(--sw-accent-ink);
+  border-color: var(--sw-accent-ink);
+}
+
+.theme-toggle__icon {
+  width: 13px;
+  height: 13px;
+}
+
+[data-theme="dark"] .theme-toggle__icon--sun {
+  display: none;
+}
+
+.theme-toggle__icon--moon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__icon--moon {
+  display: block;
+}
+
+.theme-toggle__label--light {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__label--dark {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle__label--light {
+  display: inline;
 }
 
 /* ── Hero — asymmetric 12-column grid ───────────────── */
@@ -291,6 +392,7 @@ body {
 /* ── Footer — hairline top rule ─────────────────────── */
 .site-footer {
   border-top: 1px solid var(--sw-border);
+  transition: border-color var(--sw-duration-base) var(--sw-ease-standard);
 }
 
 .site-footer__inner {
@@ -359,6 +461,10 @@ body {
 @media (max-width: 480px) {
   :root {
     --sw-margin: 20px;
+  }
+
+  .site-header__inner {
+    justify-content: center;
   }
 
   .site-footer__inner {
