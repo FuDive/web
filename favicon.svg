@@ -1,6 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <rect width="64" height="64" fill="#FFFFFF"/>
-  <path fill="#2C3E50" d="M26 14h20v7H34v8h9v7h-9v14h-8z"/>
-  <rect x="14" y="14" width="8" height="36" fill="#2C3E50"/>
-  <rect x="14" y="56" width="36" height="3" fill="#FFD700"/>
+  <g fill="#2C3E50">
+    <rect x="12" y="14" width="5" height="36"/>
+    <rect x="12" y="14" width="18" height="5"/>
+    <rect x="12" y="28" width="14" height="5"/>
+    <rect x="38" y="14" width="16" height="36" rx="8"/>
+    <rect x="34" y="14" width="5" height="36"/>
+  </g>
+  <rect x="12" y="56" width="42" height="3" fill="#FFD700"/>
 </svg>
