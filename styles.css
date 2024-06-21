@@ -1,9 +1,9 @@
-/* ─────────────────────────────────────────────────────
+/* 
    Theme: swiss-grid (Swiss International Typographic Grid)
-   Source: uiux-frontend-engineering skill — theme/sharp/02-swiss-grid.yaml
+   Source: uiux-frontend-engineering skill - theme/sharp/02-swiss-grid.yaml
    Adaptation: single accent → brand gold #FFD700; ink → brand navy #2C3E50.
    Rules: radius 0, no shadows, no gradients, whitespace as separator.
-   ───────────────────────────────────────────────────── */
+ */
 
 :root {
   /* color */
@@ -27,7 +27,7 @@
   /* radius: pure rectangles */
   --sw-radius: 0px;
 
-  /* spacing — 8px base scale */
+  /* spacing - 8px base scale */
   --sw-space-1: 8px;
   --sw-space-2: 16px;
   --sw-space-3: 24px;
@@ -41,7 +41,7 @@
   --sw-gutter: 24px;
   --sw-margin: 32px;
 
-  /* motion — restrained and linear */
+  /* motion - restrained and linear */
   --sw-duration-fast: 100ms;
   --sw-duration-base: 160ms;
   --sw-duration-slow: 240ms;
@@ -51,7 +51,7 @@
   color-scheme: light;
 }
 
-/* dark palette — theme/sharp/02-swiss-grid.yaml (brand-adapted accent) */
+/* dark palette - theme/sharp/02-swiss-grid.yaml (brand-adapted accent) */
 [data-theme="dark"] {
   --sw-bg: #0d0d0d;
   --sw-surface: #161616;
@@ -69,7 +69,7 @@
   color-scheme: dark;
 }
 
-/* ── Reset / base ───────────────────────────────────── */
+/* Reset / base */
 *,
 *::before,
 *::after {
@@ -113,7 +113,7 @@ body {
   padding-inline: var(--sw-margin);
 }
 
-/* ── Header — hairline bottom rule only ─────────────── */
+/* Header - hairline bottom rule only */
 .site-header {
   border-bottom: 1px solid var(--sw-border);
   transition: border-color var(--sw-duration-base) var(--sw-ease-standard);
@@ -183,7 +183,7 @@ body {
   border: 1px solid var(--sw-border);
 }
 
-/* theme toggle — pure rectangle, uppercase label */
+/* theme toggle - pure rectangle, uppercase label */
 .theme-toggle {
   display: inline-flex;
   align-items: center;
@@ -239,7 +239,7 @@ body {
   display: inline;
 }
 
-/* ── Hero — asymmetric 12-column grid ───────────────── */
+/* Hero - asymmetric 12-column grid */
 .hero {
   flex: 1;
   display: flex;
@@ -284,7 +284,7 @@ body {
   background: var(--sw-accent);
 }
 
-/* headline — large confident type, hierarchy via size only */
+/* headline - large confident type, hierarchy via size only */
 .headline {
   font-family: var(--sw-font-display);
   font-size: clamp(2.25rem, 6vw, 3.375rem);
@@ -313,7 +313,7 @@ body {
   animation: fade-in 240ms var(--sw-ease-entrance) 240ms forwards;
 }
 
-/* feature rows — hairline rules, no boxes */
+/* feature rows - hairline rules, no boxes */
 .features {
   list-style: none;
   margin-bottom: var(--sw-space-5);
@@ -352,7 +352,7 @@ body {
   min-width: 2ch;
 }
 
-/* progress — thin rule with gold fill */
+/* progress - thin rule with gold fill */
 .progress {
   opacity: 0;
   animation: fade-in 240ms var(--sw-ease-entrance) 360ms forwards;
@@ -389,7 +389,7 @@ body {
   transition: width 1200ms linear;
 }
 
-/* ── Footer — hairline top rule ─────────────────────── */
+/* Footer - hairline top rule */
 .site-footer {
   border-top: 1px solid var(--sw-border);
   transition: border-color var(--sw-duration-base) var(--sw-ease-standard);
@@ -432,13 +432,13 @@ body {
   fill: currentColor;
 }
 
-/* ── Entrance — restrained, linear ──────────────────── */
+/* Entrance - restrained, linear */
 @keyframes fade-in {
   from { opacity: 0; transform: translateY(8px); }
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── Responsive ─────────────────────────────────────── */
+/* Responsive */
 @media (max-width: 880px) {
   .hero__left,
   .hero__right {
@@ -473,7 +473,7 @@ body {
   }
 }
 
-/* ── Reduced motion — cross-fades only ──────────────── */
+/* Reduced motion - cross-fades only */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
