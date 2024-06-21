@@ -1,6 +1,6 @@
 # FuDive Web
 
-Under-construction landing page for [fudive.com](https://fudive.com), the FuDive wealth management platform.
+Under-construction landing page for [fudive.com](https://fudive.com), the FuDive unified wealth platform.
 
 ## Brand
 
