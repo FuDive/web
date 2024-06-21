@@ -1,11 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#FFFFFF"/>
-  <g fill="#2C3E50">
-    <rect x="12" y="14" width="5" height="36"/>
-    <rect x="12" y="14" width="18" height="5"/>
-    <rect x="12" y="28" width="14" height="5"/>
-    <rect x="38" y="14" width="16" height="36" rx="8"/>
-    <rect x="34" y="14" width="5" height="36"/>
-  </g>
-  <rect x="12" y="56" width="42" height="3" fill="#FFD700"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">FuDive</title>
+  <rect width="64" height="64" rx="14" fill="#A21F11"/>
+  <path fill="#FFFFFF" d="M10 17H30V24H17V30H28V37H17V47H10Z"/>
+  <path fill="#FFD700" fill-rule="evenodd" d="M35 17H43C52 17 57 22.5 57 32C57 41.5 52 47 43 47H35ZM42 24V40H43C47.8 40 50 37.3 50 32C50 26.7 47.8 24 43 24Z"/>
 </svg>
